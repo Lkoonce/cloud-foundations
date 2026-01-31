@@ -30,4 +30,15 @@ Inbound rules:
 Use SSH with your key pair:
 ```bash
 ssh -i your-key.pem ec2-user@<public-ip>
+## Validation
+- Confirmed Apache running via systemctl
+- Verified localhost returns HTTP 200
+- Verified public access via browser
 
+## Security Configuration
+- SSH restricted to my IP
+- HTTP (80) open to the internet via security group
+
+## Clean-up Considerations
+- Instance can be stopped or terminated to avoid charges
+- Security group rules should be restricted in production
